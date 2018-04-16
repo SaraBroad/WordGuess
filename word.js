@@ -3,7 +3,7 @@ var Letter = require("./letter.js");
 
 var Word = function(wordChoice) {
     this.wordChoice = wordChoice;
-    this.letters = [new Letter("d"), new Letter("o"), new Letter("g")];
+    this.letters = [];
 
 }
 

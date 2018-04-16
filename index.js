@@ -1,8 +1,7 @@
 var inquirer = require('inquirer');
 var Word = require("./word.js");
-
 var words = require("./words.js");
-// console.log(words);
+
 
 var newWord = new Word("dog");
 console.log(newWord.displayWord());
