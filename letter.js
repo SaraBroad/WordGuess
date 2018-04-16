@@ -5,22 +5,35 @@
 //if letter is correct, input into correct spot and show CORRECT!!!
 //if letter letter is incorrect, say INCORRECT!!! and number of guesses remaining
 //show next word after all guessesRemaining = 0
-//
 
-var Letter = function() {
-    this.underscore = "";
-    this.guessed = false;
-    this.underlyingChar = function() {
-        //if letter has been guessed
-        //return letter into placeholder space
-        //else
-        //if letter has not been guessed
-        //return underscore placeholder
+
+var Letter = function (char) {
+    // this.underscore = "_";
+    this.char = char;
+    this.isGuessed = false;
+}
+
+Letter.prototype.toString = function() {
+
+    if (this.isGuessed === true) {
+        return this.char
+
+    } else {
+        return "_";
     }
-    this.checker = function(char) {
+}
 
-    }
 
+Letter.prototype.checker = function(userChar) {
+    
+    // A function that takes a character as an argument and checks it against the underlying character, 
+    // updating the stored boolean value to true if it was guessed correctly
+    if (this.char === userChar) {
+        this.isGuessed = true;
+    } 
+        return this.isGuessed;
 }
 
 module.exports = Letter;
+
+
