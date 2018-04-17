@@ -12,7 +12,14 @@ var words = require("./words.js");
 
 var guesses = 15;
 var wordChoices = ["Divided Sky", "Simple", "Squirming Coil", "The Lizards", "Tweezer", "Reba"];
+var userGuess = process.argv[2];
 
-function guessLetters() {
-
+function randomWord() {
+    var findRandom = wordChoices[Math.floor(Math.random() * wordChoices.length)];
+    var nextWord = new Word(findRandom);
+    console.log(nextWord);
+    var logText = nextWord.wordChoice;
+    console.log(logText);
 }
+
+randomWord();

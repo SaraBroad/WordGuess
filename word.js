@@ -4,7 +4,6 @@ var Letter = require("./letter.js");
 var Word = function(wordChoice) {
     this.wordChoice = wordChoice;
     this.letters = [];
-
 }
 
 Word.prototype.displayWord = function() {
